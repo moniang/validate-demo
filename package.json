@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "form-validate-wm": "^2.0.0-beta.1",
+    "form-validate-wm": "^2.0.0-beta.2",
     "obj-wm": "^1.1.3",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",

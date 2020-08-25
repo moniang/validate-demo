@@ -1,6 +1,5 @@
-# test-validate
+# Web表单验证类示例项目
 
->此仓库为npm包`form-validate-wm`示例demo
 
 [![Document](https://img.shields.io/badge/Document-1.6.1-green)](https://validate.itwmw.com/)
 [![Npm](https://img.shields.io/badge/Npm-2.0.0.beta.1-blue)](https://www.npmjs.com/package/form-validate-wm)
@@ -9,6 +8,12 @@
 
 
 小程序，Vue，Web等项目中均可使用
+
+>此仓库为npm包`form-validate-wm`示例demo
+
+## 说明
+验证码类文件在`src/validate`文件夹下
+
 ## 文档目录
 * [安装使用](https://validate.itwmw.com/)
 * [验证器](https://validate.itwmw.com/validate.html)
@@ -25,6 +30,7 @@ npm i form-validate-wm
 ```
 
 [完整文档查看](https://validate.itwmw.com)
+
 
 ## Project setup
 ```
