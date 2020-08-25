@@ -1,17 +1,29 @@
 <template>
-  <div>
-    <span>账号：</span><input v-model="login.user" type="email" placeholder="请输入邮箱">
+  <div v-if="type !== 1">
+    <label>账号：
+      <input v-model="login.user" type="email" placeholder="请输入邮箱">
+    </label>
     <br>
-    <span>密码：</span><input v-model="login.pass" type="password" placeholder="请输入密码">
+    <label>密码：
+      <input v-model="login.pass" type="password" placeholder="请输入密码">
+    </label>
     <br>
     <button type="button" @click="loginHandle">
       登录
     </button>
-    <p style="color: red">
-      正确的账号是:test@test.com 密码123456<button type="button" @click="setLogin">
-        填入
-      </button>
-    </p>
+  </div>
+  <div v-else>
+    <label>账号：
+      <input v-model="register.user" type="email" placeholder="请输入邮箱">
+    </label>
+    <br>
+    <label>密码：
+      <input v-model="register.pass" type="password" placeholder="请输入密码">
+    </label>
+    <br>
+    <button type="button" @click="registerHandle">
+      确定注册
+    </button>
   </div>
 </template>
 
@@ -24,7 +36,12 @@ export default {
       login : {
         user : null,
         pass : null
-      }
+      },
+      register : {
+        user : null,
+        pass : null
+      },
+      type : parseInt(this.$route.params.t)
     }
   },
   methods : {
@@ -38,9 +55,21 @@ export default {
         name : 'Home'
       })
     },
-    setLogin() {
-      this.login.user = 'test@test.com'
-      this.login.pass = '123456'
+    registerHandle() {
+      const v = new LoginValidate()
+      v.setSceneName('register')
+      if (!v.check(this.register)) {
+        alert(v.getError())
+        return false
+      }
+
+      this.$store.dispatch('user/setAccount', Object.assign({}, this.register)).then(() => {
+        this.type = 0
+        this.login.user = this.register.user
+        this.register.user = null
+        this.register.pass = null
+        alert('注册成功，请登录')
+      })
     }
   }
 }

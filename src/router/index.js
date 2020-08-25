@@ -12,7 +12,7 @@ const routes = [
     },
     component : () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
   }, {
-    path : '/index',
+    path : '/',
     name : 'Index',
     meta : {
       title : '首页'
