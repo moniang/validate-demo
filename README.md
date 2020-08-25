@@ -3,7 +3,7 @@
 >此仓库为npm包`form-validate-wm`示例demo
 
 [![Document](https://img.shields.io/badge/Document-1.6.1-green)](https://validate.itwmw.com/)
-[![Npm](https://img.shields.io/badge/Npm-2.0.0-blue)](https://www.npmjs.com/package/form-validate-wm)
+[![Npm](https://img.shields.io/badge/Npm-2.0.0-beta.1-blue)](https://www.npmjs.com/package/form-validate-wm)
 ![Test](https://img.shields.io/badge/Test-ject-yellow)
 ![License](https://img.shields.io/badge/License-MIT-success)
 
