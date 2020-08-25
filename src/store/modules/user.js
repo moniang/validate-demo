@@ -31,6 +31,17 @@ const actions = {
       commit('SET_ACCOUNT', account)
       resolve()
     })
+  },
+  updateAccount({ commit }, account) {
+    const _account = state.account
+    for (let i = 0; i < _account.length; i++) {
+      if (_account[i].user === account.user) {
+        _account[i].pass = account.pass
+        break
+      }
+    }
+    setData('account', _account)
+    commit('SET_ACCOUNT', _account)
   }
 }
 export default {
