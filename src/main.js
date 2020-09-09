@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import './utils/error'
 import store from './store'
+
 Vue.config.productionTip = false
 
 router.beforeEach(async(to, from, next) => {

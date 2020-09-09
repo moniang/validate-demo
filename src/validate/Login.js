@@ -1,4 +1,4 @@
-import { Validate } from 'form-validate-wm/index'
+import { Validate } from '@itwmw/form-validate'
 import store from '@/store'
 
 class LoginValidate extends Validate {
@@ -25,6 +25,11 @@ class LoginValidate extends Validate {
     // 如果没有验证场景，默认验证rule中的全部字段
     this.setScene({
       'login' : ['user', 'pass']
+    })
+
+    this.setFilter({
+      'user' : 'removeSpace',
+      'pass' : 'removeSpace'
     })
   }
 

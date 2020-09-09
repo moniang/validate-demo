@@ -1,4 +1,4 @@
-import Obj from 'obj-wm'
+import Obj from '@itwmw/obj'
 const KEY = 'test-validate'
 
 export function getData(name = null, defaults = {}) {

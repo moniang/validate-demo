@@ -1,5 +1,5 @@
 import { getData, setData } from '@/utils/auth'
-import { ValidateRule } from 'form-validate-wm/index'
+import { ValidateRule } from '@itwmw/form-validate'
 
 const state = {
   userInfo : getData('userInfo', {}),

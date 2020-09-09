@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import { ValidateException } from 'form-validate-wm/index'
+import VueException from '@itwmw/vue-exception'
+import { ValidateException } from '@itwmw/form-validate'
 
-Vue.config.errorHandler = function(err) {
+VueException.init(Vue).register(err => {
   if (err instanceof ValidateException) {
     alert(err.getError())
   }
-}
+})
