@@ -2,7 +2,7 @@
 
 
 [![Document](https://img.shields.io/badge/Document-3.1.3-green)](https://validate.itwmw.com/)
-[![Npm](https://img.shields.io/badge/Npm-3.1.3.beta.1-blue)](https://www.npmjs.com/package/@itwmw/form-validate)
+[![Npm](https://img.shields.io/badge/Npm-3.1.3-blue)](https://www.npmjs.com/package/@itwmw/form-validate)
 ![Test](https://img.shields.io/badge/Test-ject-yellow)
 ![License](https://img.shields.io/badge/License-MIT-success)
 
